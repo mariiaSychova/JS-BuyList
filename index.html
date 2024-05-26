@@ -1,16 +1,83 @@
 <!DOCTYPE html>
-<html>
-<head lang="uk">
-    <meta charset="UTF-8">
-    <title>My Page</title>
-
-
-    <link rel="stylesheet" type="text/css" href="main.css" />
-</head>
-<body>
-	<span class="product-item">
-		Apple
-		<span class="amount">4</span>
-	</span>
-</body>
+<html lang="uk">
+	<head>
+		<title>My Page</title>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link rel="stylesheet" type="text/css" href="main.css" />
+	</head>
+	<body>
+		<div class="container">
+			<div class="block cart">
+				<div class="cart-header">
+					<input class="search-input" type="search" placeholder="Назва товару"/>
+					<button class="add-btn tooltip" data-tooltip="Додати продукт">Додати</button>
+				</div>
+				<div class="cart-items">
+					<div class="item deleted">
+						<span class="item-name">Помідори</span>
+						<div class="item-quantity">
+							<span class="quantity">2</span>
+						</div>
+						<div class="item-state">
+							<span class="purchase-state">Не куплено</span>
+						</div>
+					</div>
+					<div class="item">
+						<span class="item-name">Печиво</span>
+						<div class="item-quantity">
+							<button class="minus-btn tooltip" data-tooltip="Зменшити кількість продукту">–</button>
+							<span class="quantity">2</span>
+							<button class="plus-btn tooltip" data-tooltip="Збільшити кількість продукту">+</button>
+						</div>
+						<div class="item-state">
+							<span class="purchase-state">Куплено</span>
+							<button class="remove-btn tooltip" data-tooltip="Прибрати продукт з кошика">x</button>
+						</div>
+					</div>
+					<div class="item editing">
+						<div class="item-name">
+							<input class="edit-input" type="text" value="Сир"/>
+						</div>
+						<div class="item-quantity">
+							<button class="minus-btn disabled tooltip" data-tooltip="Неможливо зменшити кількість продукту">–</button>
+							<span class="quantity">1</span>
+							<button class="plus-btn tooltip" data-tooltip="Збільшити кількість продукту">+</button>
+						</div>
+						<div class="item-state">
+							<span class="purchase-state">Куплено</span>
+							<button class="remove-btn tooltip" data-tooltip="Прибрати продукт з кошика">x</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="block cart-summary">
+				<div class="cart-summary-label">Залишилося</div>
+				<div class="products-summary">
+					<span class="product-item">
+						Печиво
+						<span class="amount">2</span>
+					</span>
+					<span class="product-item">
+						Сир
+						<span class="amount">1</span>
+					</span>
+				</div>
+				<div class="cart-summary-label">Куплено</div>
+				<div class="products-summary">
+					<span class="product-item removed">
+						Помідори
+						<span class="amount">2</span>
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="badge">
+			<div class="title">Buy List</div>
+			<div class="text">
+				<span class="small">Created by:</span>
+				<span>Mariia</span>
+			</div>
+		</div>
+	</body>
 </html>
