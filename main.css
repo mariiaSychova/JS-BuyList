@@ -99,6 +99,11 @@ body{
 								color: white;
 								font-size: 14px;
 								font-weight: bold;
+
+								&:disabled {
+									background-color: #f69f9f;
+									box-shadow: 0 1px #f59999;
+								}
 							}
 
 							.quantity{
@@ -137,6 +142,21 @@ body{
 							justify-content: flex-end;
 							align-items: center;
 							gap: 4px;
+
+							.buy-btn{
+								display: flex;
+								justify-content: center;
+								align-items: center;
+								height: 27px;
+								border: 1px solid #9bd4ea;
+								border-radius: 4px;
+								padding: 8px 16px;
+								background-color: #b1def0;
+								box-shadow: inset 0 -2px #9bd4ea;
+								color: #575656;
+								font-size: 10px;
+								font-weight: bold;
+							}
 
 							.purchase-state{
 								display: flex;

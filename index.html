@@ -10,65 +10,17 @@
 		<div class="container">
 			<div class="block cart">
 				<div class="cart-header">
-					<input class="search-input" type="search" placeholder="Назва товару"/>
-					<button class="add-btn tooltip" data-tooltip="Додати продукт">Додати</button>
+					<input class="search-input" id="search-input" type="search" placeholder="Назва товару"/>
+					<button class="add-btn tooltip" data-tooltip="Додати продукт" onclick="addItem()">Додати</button>
 				</div>
-				<div class="cart-items">
-					<div class="item deleted">
-						<span class="item-name">Помідори</span>
-						<div class="item-quantity">
-							<span class="quantity">2</span>
-						</div>
-						<div class="item-state">
-							<span class="purchase-state">Не куплено</span>
-						</div>
-					</div>
-					<div class="item">
-						<span class="item-name">Печиво</span>
-						<div class="item-quantity">
-							<button class="minus-btn tooltip" data-tooltip="Зменшити кількість продукту">–</button>
-							<span class="quantity">2</span>
-							<button class="plus-btn tooltip" data-tooltip="Збільшити кількість продукту">+</button>
-						</div>
-						<div class="item-state">
-							<span class="purchase-state">Куплено</span>
-							<button class="remove-btn tooltip" data-tooltip="Прибрати продукт з кошика">x</button>
-						</div>
-					</div>
-					<div class="item editing">
-						<div class="item-name">
-							<input class="edit-input" type="text" value="Сир"/>
-						</div>
-						<div class="item-quantity">
-							<button class="minus-btn disabled tooltip" data-tooltip="Неможливо зменшити кількість продукту">–</button>
-							<span class="quantity">1</span>
-							<button class="plus-btn tooltip" data-tooltip="Збільшити кількість продукту">+</button>
-						</div>
-						<div class="item-state">
-							<span class="purchase-state">Куплено</span>
-							<button class="remove-btn tooltip" data-tooltip="Прибрати продукт з кошика">x</button>
-						</div>
-					</div>
-				</div>
+				<div class="cart-items" id="cart-items"></div>
 			</div>
 			<div class="block cart-summary">
 				<div class="cart-summary-label">Залишилося</div>
-				<div class="products-summary">
-					<span class="product-item">
-						Печиво
-						<span class="amount">2</span>
-					</span>
-					<span class="product-item">
-						Сир
-						<span class="amount">1</span>
-					</span>
+				<div class="products-summary" id="not-bought-items">
 				</div>
 				<div class="cart-summary-label">Куплено</div>
-				<div class="products-summary">
-					<span class="product-item removed">
-						Помідори
-						<span class="amount">2</span>
-					</span>
+				<div class="products-summary" id="bought-items">
 				</div>
 			</div>
 		</div>
@@ -79,5 +31,6 @@
 				<span>Mariia</span>
 			</div>
 		</div>
+		<script src="index.js"></script>
 	</body>
 </html>
