@@ -1,16 +1,36 @@
 <!DOCTYPE html>
-<html>
-<head lang="uk">
-    <meta charset="UTF-8">
-    <title>My Page</title>
-
-
-    <link rel="stylesheet" type="text/css" href="main.css" />
-</head>
-<body>
-	<span class="product-item">
-		Apple
-		<span class="amount">4</span>
-	</span>
-</body>
+<html lang="uk">
+	<head>
+		<title>My Page</title>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link rel="stylesheet" type="text/css" href="main.css" />
+	</head>
+	<body>
+		<div class="container">
+			<div class="block cart">
+				<div class="cart-header">
+					<input class="search-input" id="search-input" type="search" placeholder="Назва товару"/>
+					<button class="add-btn tooltip" data-tooltip="Додати продукт" onclick="addItem()">Додати</button>
+				</div>
+				<div class="cart-items" id="cart-items"></div>
+			</div>
+			<div class="block cart-summary">
+				<div class="cart-summary-label">Залишилося</div>
+				<div class="products-summary" id="not-bought-items">
+				</div>
+				<div class="cart-summary-label">Куплено</div>
+				<div class="products-summary" id="bought-items">
+				</div>
+			</div>
+		</div>
+		<div class="badge">
+			<div class="title">Buy List</div>
+			<div class="text">
+				<span class="small">Created by:</span>
+				<span>Mariia</span>
+			</div>
+		</div>
+		<script src="index.js"></script>
+	</body>
 </html>
